@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F7y-Wf-RQd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PDF Reader-->
+        <scene sceneID="u9A-UH-OQL">
+            <objects>
+                <viewController title="PDF Reader" id="F7y-Wf-RQd" customClass="FileViewController" customModule="File_Reader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mOx-zZ-Ys6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iky-Ze-spx" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="59" width="393" height="596.33333333333337"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="f4Y-ko-uqJ">
+                                <rect key="frame" x="74.666666666666671" y="668.33333333333337" width="243.66666666666663" height="93"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjD-CG-B9J">
+                                        <rect key="frame" x="0.0" y="0.0" width="243.66666666666666" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="eTf-lb-Sfm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Import PDF">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="importDocumentBtnAction:" destination="F7y-Wf-RQd" eventType="touchUpInside" id="dIe-Ig-oi2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwm-GH-Lcs">
+                                        <rect key="frame" x="0.0" y="53" width="243.66666666666666" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Text-Speech Off">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="readTextWithSpeechBtnAction:" destination="F7y-Wf-RQd" eventType="touchUpInside" id="hwn-8x-Cbq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7et-gj-L53">
+                                <rect key="frame" x="343" y="619.33333333333337" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="J1e-J4-4VR"/>
+                                    <constraint firstAttribute="width" constant="25" id="OPW-46-nA7"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="trash.slash.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="deleteFileBtnAction:" destination="F7y-Wf-RQd" eventType="touchUpInside" id="MAi-su-hqM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2be-ES-bWK"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iky-Ze-spx" firstAttribute="height" secondItem="mOx-zZ-Ys6" secondAttribute="height" multiplier="0.7" id="2L4-Rt-ADy"/>
+                            <constraint firstItem="iky-Ze-spx" firstAttribute="leading" secondItem="2be-ES-bWK" secondAttribute="leading" id="9NF-ft-NfI"/>
+                            <constraint firstItem="7et-gj-L53" firstAttribute="top" secondItem="iky-Ze-spx" secondAttribute="bottom" constant="-36" id="HID-LQ-GOg"/>
+                            <constraint firstItem="f4Y-ko-uqJ" firstAttribute="centerX" secondItem="iky-Ze-spx" secondAttribute="centerX" id="URs-TZ-U5g"/>
+                            <constraint firstItem="2be-ES-bWK" firstAttribute="trailing" secondItem="7et-gj-L53" secondAttribute="trailing" constant="25" id="YzE-0v-4d5"/>
+                            <constraint firstItem="2be-ES-bWK" firstAttribute="trailing" secondItem="iky-Ze-spx" secondAttribute="trailing" id="d5s-ut-2RB"/>
+                            <constraint firstItem="iky-Ze-spx" firstAttribute="top" secondItem="2be-ES-bWK" secondAttribute="top" id="jUR-sI-MOn"/>
+                            <constraint firstItem="f4Y-ko-uqJ" firstAttribute="top" secondItem="iky-Ze-spx" secondAttribute="bottom" constant="13" id="n76-Rl-HYL"/>
+                            <constraint firstItem="f4Y-ko-uqJ" firstAttribute="width" secondItem="mOx-zZ-Ys6" secondAttribute="width" multiplier="0.62" id="voo-sP-7sr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deleteBtn" destination="7et-gj-L53" id="CFF-Sb-cLU"/>
+                        <outlet property="pdfView" destination="iky-Ze-spx" id="Lao-hM-YCi"/>
+                        <outlet property="speechBtn" destination="Kwm-GH-Lcs" id="9JO-5n-LW2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DgF-Tt-uMK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trash.slash.fill" catalog="system" width="119" height="128"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

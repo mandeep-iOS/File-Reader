@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g5U-Du-4Cb">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Dhf-wR-5Gy">
+            <objects>
+                <viewController id="g5U-Du-4Cb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YFV-s3-GbR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="pSH-bC-TBn">
+                                <rect key="frame" x="102.66666666666667" y="344.66666666666669" width="187.66666666666663" height="187.66666666666669"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Reader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saG-eC-tLv">
+                                <rect key="frame" x="153.33333333333334" y="554.33333333333337" width="86.333333333333343" height="19.333333333333371"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pnu-5U-Cbb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="saG-eC-tLv" firstAttribute="centerX" secondItem="pSH-bC-TBn" secondAttribute="centerX" id="0aX-Ex-ja7"/>
+                            <constraint firstItem="pSH-bC-TBn" firstAttribute="centerX" secondItem="pnu-5U-Cbb" secondAttribute="centerX" id="5Zo-6g-kYz"/>
+                            <constraint firstItem="saG-eC-tLv" firstAttribute="top" secondItem="pSH-bC-TBn" secondAttribute="bottom" constant="22" id="IhJ-CQ-ewm"/>
+                            <constraint firstItem="pSH-bC-TBn" firstAttribute="centerY" secondItem="pnu-5U-Cbb" secondAttribute="centerY" id="Owz-pn-tlw"/>
+                            <constraint firstItem="pSH-bC-TBn" firstAttribute="height" secondItem="YFV-s3-GbR" secondAttribute="height" multiplier="0.22" id="V4C-kk-m2J"/>
+                            <constraint firstItem="pSH-bC-TBn" firstAttribute="width" secondItem="YFV-s3-GbR" secondAttribute="width" multiplier="0.478" id="aFa-NE-tlb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acI-YG-tRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appstore" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
